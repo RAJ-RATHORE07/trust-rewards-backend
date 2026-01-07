@@ -1,7 +1,7 @@
 # 💳 Payment Processing & Trust Scoring Platform  & Notiifcation 
 ###  Fintech Backend System
 
-![Architecture](https://raw.githubusercontent.com/your-username/your-repo/main/docs/architecture.png)
+
 
 ---
 
