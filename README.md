@@ -24,48 +24,6 @@ The system is **scalable, fault-tolerant, and interview-ready**.
 
 ## 🧱 High-Level Architecture
 
----                ┌─────────────┐
-                │   Client    │
-                └──────┬──────┘
-                       │
-                ┌──────▼──────┐
-                │ API Gateway │
-                │─────────────│
-                │ • JWT Auth  │
-                │ • RateLimit │
-                │ • Logging   │
-                └──────┬──────┘
-                       │
-            ┌──────────▼──────────┐
-            │   Payment Service   │
-            │────────────────────│
-            │ • Idempotent APIs  │
-            │ • PostgreSQL       │
-            │ • Kafka Producer  │
-            └──────────┬──────────┘
-                       │
-                 Kafka Topics
-                       │
-        ┌──────────────┼────────────────┐
-        │              │                │
-┌───────▼───────┐ ┌────▼─────┐ ┌────────▼────────┐
-│ Trust Score   │ │ Reward   │ │ Audit Log       │
-│ Service       │ │ Service  │ │ Service         │
-│────────────── │ │───────── │ │──────────────── │
-│ • Retry + DLQ │ │ • Points │ │ • Compliance    │
-│ • Scoring     │ │ • Retry  │ │ • Immutable     │
-└───────┬───────┘ └────┬─────┘ └────────┬────────┘
-        │               │                │
-        └───────────────┴────────┬───────┘
-                                  │
-                         ┌────────▼────────┐
-                         │ Notification    │
-                         │ Service         │
-                         │──────────────── │
-                         │ • Reward alerts │
-                         │ • Failure alerts│
-                         │ • Retry + DLQ   │
-                         └─────────────────┘
 
 
 ## 🔥 Core Features
