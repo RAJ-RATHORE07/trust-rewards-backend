@@ -1,7 +1,7 @@
 # 💳 Payment Processing & Trust Scoring Platform  & Notiifcation 
 ###  Fintech Backend System
 
-
+![System Architecture](fintech_backend.png)
 
 ---
 
