@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+  datasource:
+    url: jdbc:postgresql://fintech-postgres:5432/fintech_db
+    username: fintech
+    password: fintech
+
+  kafka:
+    consumer:
+      bootstrap-servers: fintech-kafka:9092

@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: notification-service
+
+  datasource:
+    url: jdbc:postgresql://fintech-postgres:5432/fintech_db
+    username: fintech
+    password: fintech
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    consumer:
+      bootstrap-servers: fintech-kafka:9092
+      auto-offset-reset: earliest

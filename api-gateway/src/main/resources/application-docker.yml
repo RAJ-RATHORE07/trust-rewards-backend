@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  data:
+    redis:
+      host: fintech-redis
+      port: 6379
+
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: http://auth-service:8081
+          predicates:
+            - Path=/auth/**
+
+        - id: payment-service
+          uri: http://payment-service:8082
+          predicates:
+            - Path=/payments/**
+
+        - id: trust-score-service
+          uri: http://trust-score-service:8083
+          predicates:
+            - Path=/trust/**
+
+        - id: reward-service
+          uri: http://reward-service:8084
+          predicates:
+            - Path=/rewards/**

@@ -1,0 +1,20 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: trust-score-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fintech_db
+    username: fintech
+    password: fintech
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092

@@ -1,0 +1,21 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: audit-service
+
+  datasource:
+    url: jdbc:postgresql://fintech-postgres:5432/fintech_db
+    username: fintech
+    password: fintech
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+  kafka:
+    consumer:
+      bootstrap-servers: fintech-kafka:9092
+      auto-offset-reset: earliest

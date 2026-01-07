@@ -1,0 +1,20 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: reward-service
+
+  datasource:
+    url: jdbc:postgresql://fintech-postgres:5432/fintech_db
+    username: fintech
+    password: fintech
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  kafka:
+    consumer:
+      bootstrap-servers: fintech-kafka:9092

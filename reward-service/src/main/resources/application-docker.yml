@@ -1,0 +1,21 @@
+   # change per service (8082 payment, 8083 trust, 8084 reward)
+
+spring:
+  application:
+    name: reward-service   # change per service
+
+  datasource:
+    url: jdbc:postgresql://fintech-postgres:5432/fintech_db
+    username: fintech
+    password: fintech
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+
+  kafka:
+    
+    bootstrap-servers: fintech-kafka:9092
