@@ -24,7 +24,7 @@ The system is **scalable, fault-tolerant, and interview-ready**.
 
 ## 🧱 High-Level Architecture
 
-(fintech_flow.png)
+![Architecture](fintech_flow.png)
 
 ## 🔥 Core Features
 
